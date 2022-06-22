@@ -17,13 +17,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
   } else {
     $dataPost = $bauyer->insert($_POST);
+    setcookie('buyer_submit', 120227, time()+86400);
 
     return $dataPost;
   }
-  // $name = $_POST['name'];
-  // $email = $_POST['email'];
-  // $address = $_POST['address'];
-
-  // $users = $user->dataInsert($name, $email,  $address, $ipaddress);
 
  }

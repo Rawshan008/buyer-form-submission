@@ -29,4 +29,12 @@ class Buyer {
 
     return $insertData;
   }
+
+  public function selectData() {
+    $dataConnect = new DataConnect();
+    $query = "SELECT * FROM tbl_buyer WHERE entry_at BETWEEN '2022-02-22' AND '2022-04-22'";
+    $select = $dataConnect->select($query);
+
+    return $select;
+  }
 }
