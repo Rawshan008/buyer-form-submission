@@ -3,7 +3,7 @@
  * Database Connection
  */ 
 
- require_once('../../config/db_connect.php');
+ require_once('config/db_connect.php');
 
 class DataConnect {
   public $host = DB_HOST;
@@ -24,7 +24,7 @@ class DataConnect {
    *
    */
   public function dbConnect() {
-    $this->link = new mysqli($this->host, $this->user, $this->pass, $this->db_name);
+    $this->link = mysqli_connect($this->host, $this->user, $this->pass, $this->db_name);
     if(!$this->link) {
       $this->error = "Connection Failed" . mysqli_connect_error();
 
@@ -45,12 +45,13 @@ class DataConnect {
     }
   }
 
+
   /**
    * Data insert into database
    */
   public function insert($query) {
     $insert_rows = $this->link->query($query) or die($this->link->error.__LINE__);
-
+  
     if ($insert_rows) {
       return $insert_rows;
     } else {

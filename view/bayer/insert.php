@@ -33,7 +33,7 @@
 
           <div class="mb-3">
             <label for="email" class="form-label">Buyer email <span id="email-error" class="text-danger"></span></label>
-            <input type="text" name="email" class="form-control" id="email">
+            <input type="text" name="buyer_email" class="form-control" id="buyer_email">
           </div>
 
           <div class="mb-3">
