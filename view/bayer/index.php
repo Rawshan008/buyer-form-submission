@@ -4,8 +4,25 @@ require_once('application/model/Buyer.php');
 
 $result_row = new Buyer();
 $result = $result_row->selectData();
-?>
 
+  if(isset($_GET['search'])){
+    $result = $result_row->selectData($_GET);
+  } else {
+    $result = $result_row->selectData();
+  }
+?>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form id="searchForm" method="GET">
+        <input type="text" name="userid" id="userid" placeholder="Entry Id: 2">
+        <input type="date" name="fdate" id="fdate">
+        <input type="date" name="ldate" id="ldate">
+        <input name="search" type="submit">
+      </form>
+    </div>
+  </div>
+</div>
 <?php if($result): ?>
 <div class="container">
   <div class="row">

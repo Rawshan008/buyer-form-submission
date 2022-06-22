@@ -193,7 +193,6 @@ function validation() {
               }
             }); 
        }       
-      
-  });
+    });
   })
 })(jQuery);

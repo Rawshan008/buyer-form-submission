@@ -30,10 +30,34 @@ class Buyer {
     return $insertData;
   }
 
-  public function selectData() {
+  public function selectData($data = "") {
     $dataConnect = new DataConnect();
-    $query = "SELECT * FROM tbl_buyer WHERE entry_at BETWEEN '2022-02-22' AND '2022-04-22'";
+    if($data) {
+      $userid = $data['userid'];
+
+      $fdate = strtotime($data['fdate']);
+      $fdate = date("Y-m-d", $fdate);
+
+      $ldate = strtotime($data['ldate']);
+      $ldate = date("Y-m-d", $ldate);
+
+
+      if($userid && $fdate && $ldate) {
+        $query = "SELECT * FROM tbl_buyer WHERE entry_by = '$userid' OR entry_at BETWEEN '$fdate' AND '$ldate'";
+      } elseif($userid) {
+        $query = "SELECT * FROM tbl_buyer WHERE entry_by = '$userid' ";
+      } else {
+        $query = "SELECT * FROM tbl_buyer WHERE entry_at BETWEEN '$fdate' AND '$ldate'";
+      }
+  
+      
+    } else {
+      $query = "SELECT * FROM tbl_buyer";
+    }
+
     $select = $dataConnect->select($query);
+    
+  
 
     return $select;
   }
