@@ -2,7 +2,7 @@
 /**
  * Buyear Class
  */
-include_once(ROOT_DIR . "/application/controller/DataConnect.php");
+include_once("application/controller/DataConnect.php");
 
 class Buyer {
   public function insert($data) {
@@ -56,8 +56,7 @@ class Buyer {
       $query = "SELECT * FROM tbl_buyer";
     }
 
-    $select = $dataConnect->select($query);
-    
+    $select = $dataConnect->select($query);    
   
 
     return $select;

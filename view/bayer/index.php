@@ -1,15 +1,15 @@
 <?php
-require_once(ROOT_DIR . '/application/model/Buyer.php');
+require_once("application/model/Buyer.php");
 
 $result_row = new Buyer();
 $result = $result_row->selectData();
-
-  if(isset($_GET['search'])){
-    $result = $result_row->selectData($_GET);
-  } else {
-    $result = $result_row->selectData();
-  }
+if(isset($_GET['search'])){
+  $result = $result_row->selectData($_GET);
+} else {
+  $result = $result_row->selectData();
+}
 ?>
+<div id="mydata"></div>
 <div class="container py-3">
   <div class="container">
     <div class="row">

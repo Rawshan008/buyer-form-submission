@@ -1,6 +1,6 @@
 <?php 
-require_once(ROOT_DIR . '/application/Validation.php');
-require_once(ROOT_DIR . '/application/model/Buyer.php');
+require_once('application/Validation.php');
+require_once('application/model/Buyer.php');
 /**
  * Data Collect
  */

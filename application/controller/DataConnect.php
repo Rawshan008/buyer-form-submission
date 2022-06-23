@@ -3,7 +3,7 @@
  * Database Connection
  */ 
 
- require_once(ROOT_DIR . '/config/db_connect.php');
+ require_once("config/db_connect.php");
 
 class DataConnect {
   public $host = DB_HOST;
