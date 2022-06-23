@@ -30,7 +30,8 @@ if(isset($_GET['search'])){
         <input type="text" name="userid" id="userid" placeholder="Entry Id: 2">
         <input type="date" name="fdate" id="fdate">
         <input type="date" name="ldate" id="ldate">
-        <input type="submit" name="search" class="btn btn-primary">
+        <input type="submit" name="search" value="Submit" class="btn btn-primary">
+        <input type="submit" name="reset" value="Reset" class="btn btn-primary">
       </form>
     </div>
   </div>

@@ -1,3 +1,9 @@
+<?php 
+ if(isset($_COOKIE['buyer_submit']) == 120227) {
+    header("Location: index.php");
+    exit();
+  }
+?>
 <div class="container py-3">
   <div class="row">
     <div class="col">
@@ -6,6 +12,15 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2 id="success-message" class="text-success"></h2>
+    </div>
+  </div>
+</div>
+
+<p class="prevent-message" style="display:none">You do not create any request before 24 hours</p>
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-6">
