@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container py-3">
   <div class="row">
     <div class="col">
-      <a href="../../../buyer-form-submission/">Home</a>
+      <a class="btn btn-primary" href="index.php">Home</a>
     </div>
   </div>
 </div>

@@ -1,6 +1,5 @@
-<?php 
-
-require_once('application/model/Buyer.php');
+<?php
+require_once(ROOT_DIR . '/application/model/Buyer.php');
 
 $result_row = new Buyer();
 $result = $result_row->selectData();
@@ -11,14 +10,27 @@ $result = $result_row->selectData();
     $result = $result_row->selectData();
   }
 ?>
-<div class="container">
+<div class="container py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a class="btn btn-primary mb-3" href="index.php?action=create_buyer">Create Buyer</a>
+
+        <?php if(isset($_COOKIE['buyer_submit']) == 120227): ?>
+          <p>You do not create any request before 24 hours</p>
+        <?php endif; ?>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container py-3">
   <div class="row">
     <div class="col">
       <form id="searchForm" method="GET">
         <input type="text" name="userid" id="userid" placeholder="Entry Id: 2">
         <input type="date" name="fdate" id="fdate">
         <input type="date" name="ldate" id="ldate">
-        <input name="search" type="submit">
+        <input type="submit" name="search" class="btn btn-primary">
       </form>
     </div>
   </div>
@@ -66,5 +78,11 @@ $result = $result_row->selectData();
   </div>
 </div>
 <?php else: ?>
-<h1>NO data Found</h1>
+<div class="container py-3">
+  <div class="row">
+    <div class="col">
+      <h1>NO data Found</h1>
+    </div>
+  </div>
+</div>
 <?php endif; ?>

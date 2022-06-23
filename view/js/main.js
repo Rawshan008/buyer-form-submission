@@ -194,5 +194,6 @@ function validation() {
             }); 
        }       
     });
+
   })
 })(jQuery);

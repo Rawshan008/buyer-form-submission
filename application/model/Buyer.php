@@ -2,7 +2,7 @@
 /**
  * Buyear Class
  */
-include_once("application/controller/DataConnect.php");
+include_once(ROOT_DIR . "/application/controller/DataConnect.php");
 
 class Buyer {
   public function insert($data) {
@@ -30,7 +30,8 @@ class Buyer {
     return $insertData;
   }
 
-  public function selectData($data = "") {
+  public function selectData($data = '') {
+
     $dataConnect = new DataConnect();
     if($data) {
       $userid = $data['userid'];
