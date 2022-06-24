@@ -22,3 +22,20 @@ This files installation is very simple. Just you will have php 7.4 + version.  N
         define("DB_NAME", "buyer-form-submission")
 
   - Now open your browser and execute the index.php file of your project root directory. like as 'localhost/buyer-form-submission/'
+
+#### Main Page:
+  ![Main page](/view/img/main.png)
+
+#### Form Page/Create Page:
+  ![Form page](/view/img/entry_form.png)
+
+
+#### Entry Prevent Message:
+  ![Form Prevent page](/view/img/entry_prevent.png)
+
+If You see this kind of form message. thats means you can not insert data. you have to wait until 24 hours. after form submitting it add a cookie in your browser "buyer_submit" for checking purpose you can delete this cookie and reinsert.
+
+#### Search:
+  ![Search Form](/view/img/search.png)
+
+If you want to search then you can search by "Entry By" and Date range. after search you can reset and show all data.
