@@ -36,6 +36,6 @@ This files installation is very simple. Just you will have php 7.4 + version.  N
 If You see this kind of form message. thats means you can not insert data. you have to wait until 24 hours. after form submitting it add a cookie in your browser "buyer_submit" for checking purpose you can delete this cookie and reinsert.
 
 #### Search:
-  ![Search Form](/view/img/entry_prevent.png)
+  ![Search Form](/view/img/search.png)
 
 If you want to search then you can search by "Entry By" and Date range. after search you can reset and show all data.
