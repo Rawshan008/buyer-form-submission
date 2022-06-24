@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2022 at 11:01 PM
+-- Generation Time: Jun 24, 2022 at 04:45 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -48,11 +48,9 @@ CREATE TABLE `tbl_buyer` (
 --
 
 INSERT INTO `tbl_buyer` (`id`, `amount`, `buyer`, `receipt_id`, `items`, `buyer_email`, `buyer_ip`, `note`, `city`, `phone`, `hash_key`, `entry_at`, `entry_by`) VALUES
-(1, 90808, 'oioiuoiuio', '908080', 'ijiohihijh', 'hkhjk@ra.co', '::1', 'oiuihkjhkj', 'hkjhjkhkjh', '09897897', '90OM2ErPGqM26', '2022-05-22', 989798),
-(2, 200, 'buyer1', '123', '4', 'buyer1@by.co', '::1', 'Note1', 'Dhaka', '12345', '20EAfcH0JSFQY', '2022-04-22', 2),
-(3, 200, 'buyer1', '123', '4', 'buyer1@by.co', '::1', 'Note1', 'Dhaka', '12345', '20EAfcH0JSFQY', '2022-06-22', 2),
-(4, 200, 'buyer2', '1232', '42', 'buyer2@by.co', '::1', 'Note2', 'Dhaka, Dhaka', '12345', '20rTw5DweF3Ps', '2022-03-22', 4),
-(5, 55, 'buyer4', '8989', 'Item4', 'buyer4@by.co', '::1', 'Note 2', 'Kulna', '08987876786', '55/nMsO4HG22.', '2022-02-22', 2);
+(12, 200, 'Buyer 1', 'ReceiptOne', 'Items', 'buyer1@by.co', '::1', 'Notes', 'Dhaka', '8801234567891', '20d9p8W.4LWTo', '2022-06-24', 1),
+(13, 400, 'Buyer 1	', 'ReceiptTwo', 'Items', 'buyer2@by.co', '::1', 'Notes', 'Khulna', '8809876543210', '40Ja0O4wvn7qg', '2022-06-24', 2),
+(14, 600, 'Buyer 3', 'ReceiptThree', 'Items', 'buyer2@by.co', '::1', 'Notes', 'Rajshahi', '8809876546781', '60.g2PDa6UKgI', '2022-06-24', 3);
 
 --
 -- Indexes for dumped tables
@@ -72,7 +70,7 @@ ALTER TABLE `tbl_buyer`
 -- AUTO_INCREMENT for table `tbl_buyer`
 --
 ALTER TABLE `tbl_buyer`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
