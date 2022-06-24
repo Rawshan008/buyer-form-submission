@@ -16,9 +16,9 @@ This files installation is very simple. Just you will have php 7.4 + version.  N
   - Create a database on your mysql named "buyer-form-submission" or you can create any name. and import data table "tbl_buyer.sql" in your database.
   - Now set your Database credentials in "config/db_connect.php" file. Now edit DB_HOST, DB_USER, DB_PASS, DB_NAME
     
-      - define("DB_HOST", "localhost");
-      - define("DB_USER", "root");
-      - define("DB_PASS", "");
-      - define("DB_NAME", "buyer-form-submission");
+    - define("DB_HOST", "localhost");
+    - define("DB_USER", "root");
+    - define("DB_PASS", "");
+    - define("DB_NAME", "buyer-form-submission");
 
   - Now open your browser and execute the index.php file of your project root directory. like as 'localhost/buyer-form-submission/'
