@@ -14,11 +14,7 @@ if(isset($_GET['search'])){
   <div class="container">
     <div class="row">
       <div class="col">
-        <a class="btn btn-primary mb-3" href="index.php?action=create_buyer">Create Buyer</a>
-
-        <?php if(isset($_COOKIE['buyer_submit']) == 120227): ?>
-          <p>You do not create any request before 24 hours</p>
-        <?php endif; ?>
+        <a class="btn btn-primary" href="index.php?action=create_buyer">Create Buyer</a>
       </div>
     </div>
   </div>
@@ -26,12 +22,20 @@ if(isset($_GET['search'])){
 <div class="container py-3">
   <div class="row">
     <div class="col">
-      <form id="searchForm" method="GET">
-        <input type="text" name="userid" id="userid" placeholder="Entry Id: 2">
-        <input type="date" name="fdate" id="fdate">
-        <input type="date" name="ldate" id="ldate">
-        <input type="submit" name="search" value="Submit" class="btn btn-primary">
-        <input type="submit" name="reset" value="Reset" class="btn btn-primary">
+      <form id="searchForm" class=" row g-3" method="GET">
+        <div class="col-auto">
+          <input class="form-control" type="text" name="userid" id="userid" placeholder="Enter User ID">
+        </div>
+        <div class="col-auto">
+          <input class="form-control" type="date" name="fdate" id="fdate">
+        </div>
+        <div class="col-auto">
+          <input class="form-control" type="date" name="ldate" id="ldate">
+        </div>
+        <div class="col-auto">
+          <input type="submit" name="search" value="Submit" class="btn btn-primary">
+          <input type="submit" name="reset" value="Reset" class="btn btn-danger">
+        </div>
       </form>
     </div>
   </div>
@@ -40,8 +44,8 @@ if(isset($_GET['search'])){
 <div class="container">
   <div class="row">
     <div class="col">
-      <table class="table">
-        <tr>
+      <table class="table border table-stripe">
+        <tr class="bg-primary text-white">
           <th scope="col">Serial No</th>
           <th scope="col">Amount</th>
           <th scope="col">Buyer</th>
@@ -82,7 +86,7 @@ if(isset($_GET['search'])){
 <div class="container py-3">
   <div class="row">
     <div class="col">
-      <h1>NO data Found</h1>
+      <h1 class="display-6">No data Found</h1>
     </div>
   </div>
 </div>

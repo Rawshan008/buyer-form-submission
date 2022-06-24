@@ -17,7 +17,7 @@ class Buyer {
     $ipAddress = $_SERVER['REMOTE_ADDR'];
     $note =  $data['note'];
     $city = $data['city'];
-    $phone = $data['phone'];
+    $phone = "880" . $data['phone'];
     $hash_key = crypt($data['receipt_id'], $data['amount']);
     $entry_at = date('Y-m-d');
     $entry_by = $data['entry_by'];

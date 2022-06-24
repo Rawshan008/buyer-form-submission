@@ -1,26 +1,17 @@
-<?php 
- if(isset($_COOKIE['buyer_submit']) == 120227) {
-    header("Location: index.php");
-    exit();
-  }
-?>
-<div class="container py-3">
+<div class="container  py-3">
   <div class="row">
     <div class="col">
       <a class="btn btn-primary" href="index.php">Home</a>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
       <h2 id="success-message" class="text-success"></h2>
+      <hp id="error-message" class="text-danger"></hp>
+      <?php if(isset($_COOKIE['buyer_submit']) == 120227): ?>
+        <p class="display-6 text-danger mt-3">You do not create any request before 24 hours</p>
+      <?php endif; ?>
     </div>
   </div>
 </div>
 
-<p class="prevent-message" style="display:none">You do not create any request before 24 hours</p>
+<?php if(isset($_COOKIE['buyer_submit']) != 120227): ?>
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-6">
@@ -63,7 +54,10 @@
 
           <div class="mb-3">
             <label for="phone" class="form-label">Phone <span id="phone-error" class="text-danger"></span></label>
-            <input type="text" name="phone" class="form-control" id="phone">
+            <div class="input-group">
+              <div class="input-group-text">880</div>
+              <input type="text" name="phone" class="form-control" id="phone">
+            </div>
           </div>
 
 
@@ -77,3 +71,4 @@
       </div>
     </div>
   </div>
+  <?php endif; ?>

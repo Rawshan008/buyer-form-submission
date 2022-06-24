@@ -27,7 +27,7 @@ function validation() {
     amountError.innerHTML = "( Require )";
     valid = false;
   } else if (isNaN(amount)) {
-    amountError.innerHTML = "( Please Input a valid Number )";
+    amountError.innerHTML = "( This field should be only Number )";
     valid = false;
   } else {
     amountError.innerHTML = "";
@@ -189,9 +189,15 @@ function validation() {
               url: 'api.php',
               data: $('#buyerForm').serialize(),
               success: function (response) {
-               $("#success-message").html("Success");
-                $("#buyerForm").hide();
-                $(".prevent-message").show();
+                if(response) {
+                  $("#error-message").html(response);
+                } else {
+                  $("#success-message").html("Your request Successfully added.");
+                  $("#buyerForm").hide();
+                  $(".prevent-message").show();
+                }
+                
+               
               }
             }); 
        }       
