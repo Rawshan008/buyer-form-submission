@@ -3,13 +3,10 @@
 ## Validation both front-end and Backend with Javascript and PHP.
 
 ### Requirement and
--- PHP 7.4+
-
--- jQuery 3.5.0 (Included)
-
--- Bootstrap (Included)
-
--- HTML, CSS (Included)
+    - PHP 7.4+
+    - jQuery 3.5.0 (Included)
+    - Bootstrap (Included)
+    - HTML, CSS (Included)
 
 #### Installation
 This files installation is very simple. Just you will have php 7.4 + version.  Now,
