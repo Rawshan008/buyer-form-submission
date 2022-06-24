@@ -21,4 +21,10 @@ This files installation is very simple. Just you will have php 7.4 + version.  N
     - define("DB_PASS", "");
     - define("DB_NAME", "buyer-form-submission");
 
+    - PHP 7.4+
+    - jQuery 3.5.0 (Included)
+    - Bootstrap (Included)
+    - HTML, CSS (Included)
+
   - Now open your browser and execute the index.php file of your project root directory. like as 'localhost/buyer-form-submission/'
+
